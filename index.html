@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta data -->
+	    <meta charset="utf-8" />
+	    <meta name="description" content="Crêpe price" />
+	    <meta name="keywords" content="immaculata, ics2o" />
+	    <meta name="author" content="Graeme" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon -->
+	    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+	    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+	    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+	    <link rel="manifest" href="./fav_index/site.webmanifest" />
+		<!-- Google MDL -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-green.min.css" />	
+		<!-- Css style sheet -->
+		<link rel="stylesheet" href="./css/style.css" />
+	    <title>Crêpe price</title>
+	</head>
+	<body>
+		<!-- Js file link -->
+	    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	    <script src="./js/script.js"></script>
+
+		<!-- MDL Header -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	    	<header class="mdl-layout__header">
+		        <div class="mdl-layout__header-row">
+		        	<span class="mdl-layout-title">Crêpe price</span>
+		        </div>
+	    	</header>
+
+			<!-- Image and info -->
+			<center><h1>Crêpe price</h1>
+   			<img src="./images/museum.jpg" width="25%">
+
+			<!-- Info -->
+			<h5>Enter the number of crêpes you would like, choose your topping and find out how much it will cost</h5>
+			
+			<!-- Form for drop down menus -->
+			<form action="#">
+				
+				<!--  Drop down menu for number of Crêpes -->
+				<label for="number">Please select the number of crêpes you would like</label>
+				<select name="number" id="number">
+					<option value="">Number of crêpes</option>
+					<option value = "one">1</option>
+					<option value = "two">2</option>
+					<option value = "three">3</option>
+					<option value = "four">4</option>
+				</select>
+			
+				<!-- Drop down menu for days of the week -->
+				<label for="topping" class="topping">Please select the number of toppings you would like</label>
+				<select name="topping" id="topping">
+					<option value="">Number of toppings</option>
+					<option value = "Tone">1</option>
+					<option value = "Ttwo">2</option>
+					<option value = "Tthree">3</option>
+					<option value = "Tfour">4</option>
+					<option value = "Tfive">5</option>
+					<option value = "Tsix">6</option>
+				</select>
+			</form>
+			<br>
+
+			<!-- Submit button to submit guess -->
+			<br>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="enter()">
+			    Submit
+			</button>
+			<br>
+			<br>
+
+			<!-- Div for answers -->
+			<p>
+			 <div id="answers">
+			    <div id="cost" class="cost"></div>
+			 </div>
+			</p>
+		</div>
+	</body>
+</html>
