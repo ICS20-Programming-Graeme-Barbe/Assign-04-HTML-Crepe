@@ -14,7 +14,7 @@
 	    <link rel="manifest" href="./fav_index/site.webmanifest" />
 		<!-- Google MDL -->
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-green.min.css" />	
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-amber.min.css" />	
 		<!-- Css style sheet -->
 		<link rel="stylesheet" href="./css/style.css" />
 	    <title>Graeme's Diner</title>
@@ -32,18 +32,19 @@
 		        </div>
 	    	</header>
 
-			<!-- Image and info -->
-			<center><h1>Crêpe price</h1>
-   			<img src="./images/museum.jpg" width="25%">
-
-			<!-- Info -->
-			<h5>Enter the number of crêpes you would like, choose your topping and find out how much it will cost</h5>
+			<center><table>
+				<tr>
+					<th><h5>Welcome to Graeme's diner. Unfortunately the only thing we serve here is eggs. Please enter you order below and find out the cost.</h5></th>
+				</tr>
+					<th><img src="./images/Eggs.jpg" width="20%"</th>
+				</tr>
+			</table>
 			
 			<!-- Form for selections -->
 			<form action="#">
 				
 				<!--  Drop down menu for how you would like your eggs -->
-				<label for="eggs">Please select how you would like your eggs cooked</label>
+				<h5>How would you like your eggs cooked?</h5>
 				<select name="eggs" id="eggs">
 					<option value="">How would you like your eggs?</option>
 					<option value = "sunnySideUp">Sunny Side Up</option>
@@ -55,7 +56,7 @@
 			
 				<!-- Drop down menu for number of eggs -->
 				<br>
-				<label for="numberOfEggs" class="numberOfEggs">Please select the number of eggs you would like</label>
+				<h5>How many eggs would you like?</h5>
 				<select name="numberOfEggs" id="numberOfEggs">
 					<option value="">Number of eggs</option>
 					<option value = "two">2</option>
@@ -67,6 +68,7 @@
 
 				<!-- Checkbox for toppings -->
 				<br>
+				<h5>Would you like toppings with your eggs?</h5>
 				<input type="checkbox" id="Bacon" name="toppings" value="Bacon">
 				<label for="Bacon">Bacon</label>
 				<input type="checkbox" id="Cheese" name="toppings" value="Cheese">
@@ -81,8 +83,9 @@
 
 				<!-- Radio buttons for drink -->
 				<br>
-				<input type="radio" id="None" name="drink" value="None">
-				<label for="None">None</label>
+				<h5>Would you like a drink?</h5>
+				<input type="radio" id="No" name="drink" value="No" checked>
+				<label for="None">No</label>
 				<input type="radio" id="Milkshake" name="drink" value="Milkshake">
 				<label for="Milkshake">Milkshake</label>
 				<input type="radio" id="Coffee" name="drink" value="Coffee">
@@ -103,7 +106,9 @@
 			<!-- Div for answers -->
 			<p>
 			 <div id="answers">
-			    <div id="total"</div>
+				<div id="subtotal"></div>
+				<div id="tax"></div>
+			    <div id="total"></div>
 			 </div>
 			</p>
 		</div>

@@ -22,7 +22,12 @@ function submit() {
 	const COFFEE = 2.50
 	const TEA = 2.50
 
-	// Type of eggs
+	//Initializes variables
+	let eggType;
+	let numEggs;
+	let drinkPrice;
+	
+	// How you want your eggs cooked
 	let selectTypeOfEggs = document.getElementById('eggs')
 	let typeOfEggs = selectTypeOfEggs.options[selectTypeOfEggs.selectedIndex].value
 
@@ -31,36 +36,62 @@ function submit() {
 	let numberOfEggs = selectNumEggs.options[selectNumEggs.selectedIndex].value
 
 	// Toppings Cost
-	let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-  	let numToppings = checkboxes.length;
-  	let costToppings = numToppings * TOPPING_COST;
+	let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked')
+  	let numToppings = checkboxes.length
+  	let costToppings = numToppings * TOPPING_COST
 
 	// Drink cost
 	let drink = document.querySelectorAll('input[name="drink"]:checked').value;
 
-	// If statement for type of eggs
-	if (typeOfEggs == "") {
-		document.getElementById('total').innerHTML = "Please select how you would like your eggs cooked."
-	} else if (typeOfEggs == "sunnySideUp") {
-		let eggType = SUNNY_SIDE_UP
-	} else if (typeOfEggs == "overEasy") {
-		let eggType = OVER_EASY
-	} else if (typeOfEggs == "Scrambled") {
-		let eggType = SCRAMBLED
+	if (typeOfEggs != "") {
+		if (numberOfEggs != "") {
+			// If statement for how you want your eggs cooked
+			if (typeOfEggs == "sunnySideUp") {
+				eggType = SUNNY_SIDE_UP
+			} else if (typeOfEggs == "overEasy") {
+				eggType = OVER_EASY
+			} else if (typeOfEggs == "Scrambled") {
+				eggType = SCRAMBLED
+			} else {
+				eggType = OMELETTE
+			}
+	
+			//If statement for number of eggs
+			if (numberOfEggs == "two") {
+				numEggs = TWO_EGGS
+			} else if (numberOfEggs == "three") {
+				numEggs = THREE_EGGS
+			} else if (numberOfEggs == "four") {
+				numEggs = FOUR_EGGS
+			} else {
+				numEggs = FIVE_EGGS
+			}
+	
+			//If statement for drink
+			if (drink == "No") {
+			drinkPrice = NO_DRINK
+		} else if (drink == "Milkshake") {
+			drinkPrice = MILKSHAKE
+		} else if (drink == "Coffee") {
+			drinkPrice = COFFEE
+		} else {
+			drinkPrice = TEA
+		}
+	
+		//Calculations
+		let subtotal = eggType + numEggs + costToppings + drinkPrice
+		let tax = subtotal * HST
+		let total = subtotal + tax
+	
+		//Displays subtotal, tax, total
+		document.getElementById('subtotal').innerHTML = "Your subtotal is $" + subtotal.toFixed(2)
+		document.getElementById('tax').innerHTML = "Your tax is $" + tax.toFixed(2)
+		document.getElementById('total').innerHTML = "Your total is $" + total.toFixed(2)
+		
+		} else {
+			document.getElementById('total').innerHTML = "Please select how many eggs you would like."
+		}
 	} else {
-		let eggType = OMELETTE
-	}
-
-	// If statement for number of eggs
-	if (numberOfEggs == "") {
-		document.getElementById('total').innerHTML = "Please select how many eggs you would like."
-	} else if (numberOfEggs == "two") {
-		let numEggs = TWO_EGGS
-	} else if (numberOfEggs == "three") {
-		let numEggs = THREE_EHHS
-	} else if (numberOfEggs == "four") {
-		let numEggs = FOUR_EGGS
-	} else {
-		let numEggs = FIVE_EGGS
+	document.getElementById('total').innerHTML = "Please select how you would like your eggs cooked."
 	}
 }
