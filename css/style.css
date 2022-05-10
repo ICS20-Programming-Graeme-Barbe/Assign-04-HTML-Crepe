@@ -1,4 +1,46 @@
-#toppings {
+/* Text alignement for toppings */
+#Bacon {
+	position: relative;
+	top: 2px;
+}
+
+#Cheese {
+	position: relative;
+	top: 2px;
+}
+
+#Spinach {
+	position: relative;
+	top: 2px;
+}
+
+#redPepper {
+	position: relative;
+	top: 2px;
+}
+
+#Ham {
+	position: relative;
+	top: 2px;
+}
+
+/* Text alignement for drinks */
+#None {
+	position: relative;
+	top: 2px;
+}
+
+#Milkshake {
+	position: relative;
+	top: 2px;
+}
+
+#Coffee {
+	position: relative;
+	top: 2px;
+}
+
+#Tea {
 	position: relative;
 	top: 2px;
 }
