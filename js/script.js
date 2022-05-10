@@ -13,9 +13,12 @@ function submit() {
 	let numberOfToppings = selectToppings.options[select.selectedIndex].value
 
 	// If statement to determine number of crêpes selected 
-	if (numberOfCrêpes == "")
+	if (numberOfCrêpes == "") {
 		//Nothing was inputted 
 		document.getElementById('total').innerHTML = "Please select a size"
-	else if (numberOfCrêpes == "one")
-		let numberPrice = 3
+	} else if (numberOfCrêpes == "one") {
+		let numberPrice = 
+	} else if (numberOfCrêpes == "two") {
+		let numberPrice = 
+	}
 }
