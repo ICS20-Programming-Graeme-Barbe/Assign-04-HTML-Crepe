@@ -14,7 +14,7 @@
 	    <link rel="manifest" href="./fav_index/site.webmanifest" />
 		<!-- Google MDL -->
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-amber.min.css" />	
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-deep_orange.min.css" />	
 		<!-- Css style sheet -->
 		<link rel="stylesheet" href="./css/style.css" />
 	    <title>Graeme's Diner</title>
@@ -28,7 +28,7 @@
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 	    	<header class="mdl-layout__header">
 		        <div class="mdl-layout__header-row">
-		        	<span class="mdl-layout-title">Graeme's diner </span>
+		        	<span class="mdl-layout-title">GRAEME'S DINER</span>
 		        </div>
 	    	</header>
 
@@ -84,7 +84,7 @@
 				<!-- Radio buttons for drink -->
 				<br>
 				<h5>Would you like a drink?</h5>
-				<input type="radio" id="No" name="drink" value="No">
+				<input type="radio" id="No" name="drink" value="No" checked>
 				<label for="No">No</label>
 				<input type="radio" id="Milkshake" name="drink" value="Milkshake">
 				<label for="Milkshake">Milkshake</label>
@@ -105,10 +105,10 @@
 
 			<!-- Div for answers -->
 			<p>
-			 <div id="answers">
-				<div id="subtotal"></div>
-				<div id="tax"></div>
-			    <div id="total"></div>
+			 <div id="cost">
+				<div id="subtotal" class="Total"></div>
+				<div id="tax" class="Total"></div>
+			    <div id="total" class="Total"></div>
 			 </div>
 			</p>
 		</div>

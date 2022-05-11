@@ -41,7 +41,7 @@ function submit() {
   	let costToppings = numToppings * TOPPING_COST
 
 	// Drink cost
-	let drink = document.querySelector('input[name="drink"]:checked').value;
+	let drink = document.querySelector("input[type='radio'][name=drink]:checked").value;
 
 	if (typeOfEggs != "") {
 		if (numberOfEggs != "") {
