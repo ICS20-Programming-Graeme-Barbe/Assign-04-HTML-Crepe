@@ -6,6 +6,8 @@ body{
 h5 {
 	background-color: #ffd42c;
 	padding: 15px;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 /* This centers the text in the MDL header */

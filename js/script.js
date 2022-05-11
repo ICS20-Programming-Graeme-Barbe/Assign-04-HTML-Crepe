@@ -3,7 +3,7 @@
 // JS functions for index.html
 
 
-// This function tells the user the cost of getting into the museum
+// This function tells the user the cost of their order
 'use strict';
 function submit() {
 	// Constants
