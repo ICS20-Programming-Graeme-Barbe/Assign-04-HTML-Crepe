@@ -8,6 +8,14 @@ h5 {
 	padding: 15px;
 }
 
+/* This centers the text in the MDL header */
+.mdl-layout__header-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+}
+
 /* Text alignement for toppings */
 #Bacon {
 	position: relative;
