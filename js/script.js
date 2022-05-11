@@ -41,7 +41,7 @@ function submit() {
   	let costToppings = numToppings * TOPPING_COST
 
 	// Drink cost
-	let drink = document.querySelectorAll('input[name="drink"]:checked').value;
+	let drink = document.querySelector('input[name="drink"]:checked').value;
 
 	if (typeOfEggs != "") {
 		if (numberOfEggs != "") {
@@ -69,24 +69,24 @@ function submit() {
 	
 			//If statement for drink
 			if (drink == "No") {
-			drinkPrice = NO_DRINK
-		} else if (drink == "Milkshake") {
-			drinkPrice = MILKSHAKE
-		} else if (drink == "Coffee") {
-			drinkPrice = COFFEE
-		} else {
-			drinkPrice = TEA
-		}
+				drinkPrice = NO_DRINK
+			} else if (drink == "Milkshake") {
+				drinkPrice = MILKSHAKE
+			} else if (drink == "Coffee") {
+				drinkPrice = COFFEE
+			} else {
+				drinkPrice = TEA
+			}
 	
-		//Calculations
-		let subtotal = eggType + numEggs + costToppings + drinkPrice
-		let tax = subtotal * HST
-		let total = subtotal + tax
-	
-		//Displays subtotal, tax, total
-		document.getElementById('subtotal').innerHTML = "Your subtotal is $" + subtotal.toFixed(2)
-		document.getElementById('tax').innerHTML = "Your tax is $" + tax.toFixed(2)
-		document.getElementById('total').innerHTML = "Your total is $" + total.toFixed(2)
+			//Calculations
+			let subtotal = eggType + numEggs + costToppings + drinkPrice
+			let tax = subtotal * HST
+			let total = subtotal + tax
+		
+			//Displays subtotal, tax, total
+			document.getElementById('subtotal').innerHTML = "Your subtotal is $" + subtotal.toFixed(2)
+			document.getElementById('tax').innerHTML = "Your tax is $" + tax.toFixed(2)
+			document.getElementById('total').innerHTML = "Your total is $" + total.toFixed(2)
 		
 		} else {
 			document.getElementById('total').innerHTML = "Please select how many eggs you would like."

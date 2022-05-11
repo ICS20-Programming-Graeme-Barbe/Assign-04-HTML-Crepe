@@ -1,3 +1,13 @@
+/* Color changes */
+body{
+	background-color: #957DAD;
+}
+
+h5 {
+	background-color: #ffee135;
+	padding: 15px;
+}
+
 /* Text alignement for toppings */
 #Bacon {
 	position: relative;
