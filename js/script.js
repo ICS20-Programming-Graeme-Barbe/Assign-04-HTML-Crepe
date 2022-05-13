@@ -68,11 +68,11 @@ function submit() {
 			}
 	
 			//If statement for drink
-			if (drink == "No") {
+			if (drink == "no") {
 				drinkPrice = NO_DRINK
-			} else if (drink == "Milkshake") {
+			} else if (drink == "milkshake") {
 				drinkPrice = MILKSHAKE
-			} else if (drink == "Coffee") {
+			} else if (drink == "coffee") {
 				drinkPrice = COFFEE
 			} else {
 				drinkPrice = TEA
