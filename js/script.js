@@ -87,8 +87,7 @@ function submit() {
 			document.getElementById('subtotal').innerHTML = "Your subtotal is $" + subtotal.toFixed(2)
 			document.getElementById('tax').innerHTML = "Your tax is $" + tax.toFixed(2)
 			document.getElementById('total').innerHTML = "Your total is $" + total.toFixed(2)
-			document.getElementById('total').innerHTML = " " + drink
-		
+			
 		} else {
 			document.getElementById('total').innerHTML = "Please select how many eggs you would like."
 		}
